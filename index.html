@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My College Progress</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1 id="siteTitle">My College Progress</h1>
+      <p id="siteSubtitle">Tracking my academic journey semester by semester.</p>
+    </div>
+  </header>
 
+  <main class="container">
+    <section class="card intro-card">
+      <h2>About My Path</h2>
+      <p id="aboutText">Loading...</p>
+    </section>
+
+    <section class="card stats-card">
+      <h2>Semester Overview</h2>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="stat-number" id="semesterValue">--</span>
+          <span class="stat-label">Current Semester</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number" id="coursesValue">0</span>
+          <span class="stat-label">Courses</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number" id="assignmentsValue">0</span>
+          <span class="stat-label">Assignments</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number" id="overallProgressValue">0%</span>
+          <span class="stat-label">Overall Progress</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Overall Progress</h2>
+      <div class="progress-bar">
+        <div id="overallProgressBar" class="progress-fill"></div>
+      </div>
+      <p id="overallProgressText">0% complete</p>
+    </section>
+
+    <section class="card">
+      <h2>Current Courses</h2>
+      <div id="coursesList" class="courses-grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>Latest Updates</h2>
+      <ul id="updatesList" class="updates-list"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Goals</h2>
+      <ul id="goalsList" class="goals-list"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built with GitHub Pages</p>
+  </footer>
+
+<script src="app.js"></script>
+</body>
+</html>
