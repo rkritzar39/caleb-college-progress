@@ -1,1 +1,51 @@
-
+{
+  "siteTitle": "Caleb’s College Progress",
+  "siteSubtitle": "Tracking my academic journey at The University of Toledo.",
+  "about": "I am beginning at The University of Toledo through Exploratory Studies while preparing for a future transition into Cyber Security. This page shares my academic progress, semester milestones, and current coursework.",
+  "semester": "Fall 2026",
+  "assignmentsCompleted": 3,
+  "assignmentsTotal": 12,
+  "overallProgress": 25,
+  "courses": [
+    {
+      "name": "Math Modeling Problem Solving",
+      "term": "Fall 2026",
+      "description": "Building quantitative reasoning and structured problem-solving skills.",
+      "progress": 20
+    },
+    {
+      "name": "Introduction to Logic",
+      "term": "Fall 2026",
+      "description": "Developing formal reasoning and analytical thinking for future Cyber Security study.",
+      "progress": 30
+    },
+    {
+      "name": "College Composition I",
+      "term": "Fall 2026",
+      "description": "Strengthening writing and communication for college and technical work.",
+      "progress": 25
+    },
+    {
+      "name": "Orientation",
+      "term": "Fall 2026",
+      "description": "Building a strong foundation for success in college.",
+      "progress": 40
+    },
+    {
+      "name": "Managing Diversity in the Workplace",
+      "term": "Fall 2026",
+      "description": "Developing teamwork, professionalism, and workplace awareness.",
+      "progress": 15
+    }
+  ],
+  "updates": [
+    "Started Fall 2026 at The University of Toledo.",
+    "Set up my first semester schedule.",
+    "Began coursework in Math Modeling Problem Solving and Introduction to Logic."
+  ],
+  "goals": [
+    "Complete Fall 2026 with a strong academic foundation.",
+    "Build skills that support a future transition into Cyber Security.",
+    "Track progress consistently throughout the semester."
+  ]
+}
