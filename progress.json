@@ -1,9 +1,9 @@
 {
   "siteTitle": "Caleb’s College Progress",
   "siteSubtitle": "Tracking my academic journey at The University of Toledo.",
-  "about": "I am beginning at The University of Toledo through Exploratory Studies while preparing for a future transition into Cyber Security. This page shares my academic progress, semester milestones, and current coursework.",
+  "about": "I am beginning at The University of Toledo through Exploratory Studies while preparing for a future transition into Cyber Security. This page shares my academic progress, semester milestones, registered coursework, and later in the semester, grade updates.",
   "semester": "Fall 2026",
-  "semesterStart": "August 31, 2026",
+  "semesterStart": "2026-08-31",
   "totalCreditHours": 14,
   "assignmentsCompleted": 0,
   "assignmentsTotal": 0,
@@ -13,7 +13,7 @@
       "name": "College Composition I",
       "term": "Fall 2026",
       "hours": 3,
-      "description": "Developing writing and communication for college and technical work.",
+      "description": "Developing writing and communication skills for college and technical work.",
       "status": "Registered",
       "gradeLetter": "",
       "gradeScore": "",
@@ -37,7 +37,7 @@
       "name": "Managing Diversity in the Workplace",
       "term": "Fall 2026",
       "hours": 3,
-      "description": "Developing teamwork, professionalism, and workplace awareness.",
+      "description": "Building teamwork, professionalism, and workplace awareness.",
       "status": "Registered",
       "gradeLetter": "",
       "gradeScore": "",
@@ -74,6 +74,32 @@
     "Finalized Fall 2026 course plan.",
     "Registered for 14 planned credit hours.",
     "Preparing for the first day of classes on August 31, 2026."
+  ],
+  "upcomingDates": [
+    {
+      "date": "Aug 31, 2026",
+      "label": "First day of Fall 2026 classes"
+    },
+    {
+      "date": "Sep 7, 2026",
+      "label": "Labor Day — no classes"
+    },
+    {
+      "date": "Oct 19–20, 2026",
+      "label": "Fall Break"
+    },
+    {
+      "date": "Nov 26–27, 2026",
+      "label": "Thanksgiving Break"
+    },
+    {
+      "date": "Dec 11, 2026",
+      "label": "Last day of classes"
+    },
+    {
+      "date": "Dec 14–18, 2026",
+      "label": "Finals Week"
+    }
   ],
   "goals": [
     "Begin Fall 2026 with a strong academic foundation.",
