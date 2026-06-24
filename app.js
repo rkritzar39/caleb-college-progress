@@ -3,7 +3,7 @@ async function loadProgress() {
     const response = await fetch("progress.json");
 
     if (!response.ok) {
-      throw new Error(Could not load progress.json (${response.status}));
+      throw new Error("Could not load progress.json (" + response.status + ")");
     }
 
     const data = await response.json();
@@ -14,14 +14,14 @@ async function loadProgress() {
     document.getElementById("semesterValue").textContent = data.semester;
     document.getElementById("coursesValue").textContent = data.courses.length;
     document.getElementById("assignmentsValue").textContent =
-      ${data.assignmentsCompleted}/${data.assignmentsTotal};
+      data.assignmentsCompleted + "/" + data.assignmentsTotal;
     document.getElementById("overallProgressValue").textContent =
-      ${data.overallProgress}%;
+      data.overallProgress + "%";
     document.getElementById("overallProgressText").textContent =
-      ${data.overallProgress}% complete;
+      data.overallProgress + "% complete";
 
-    const overallBar = document.getElementById("overallProgressBar");
-    overallBar.style.width = ${data.overallProgress}%;
+    var overallBar = document.getElementById("overallProgressBar");
+    overallBar.style.width = data.overallProgress + "%";
 
     renderCourses(data.courses);
     renderUpdates(data.updates);
@@ -34,46 +34,67 @@ async function loadProgress() {
 }
 
 function renderCourses(courses) {
-  const container = document.getElementById("coursesList");
+  var container = document.getElementById("coursesList");
   container.innerHTML = "";
 
-  courses.forEach(course => {
-    const card = document.createElement("div");
+  courses.forEach(function(course) {
+    var card = document.createElement("div");
     card.className = "course-card";
 
-    card.innerHTML = 
-      <h3>${course.name}</h3>
-      <div class="course-meta">${course.term}</div>
-      <p>${course.description}</p>
-      <div class="course-progress">
-        <div class="course-progress-label">Progress: ${course.progress}%</div>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width: ${course.progress}%"></div>
-        </div>
-      </div>
-    ;
+    var title = document.createElement("h3");
+    title.textContent = course.name;
+
+    var meta = document.createElement("div");
+    meta.className = "course-meta";
+    meta.textContent = course.term;
+
+    var description = document.createElement("p");
+    description.textContent = course.description;
+
+    var progressWrapper = document.createElement("div");
+    progressWrapper.className = "course-progress";
+
+    var progressLabel = document.createElement("div");
+    progressLabel.className = "course-progress-label";
+    progressLabel.textContent = "Progress: " + course.progress + "%";
+
+    var progressBar = document.createElement("div");
+    progressBar.className = "progress-bar";
+
+    var progressFill = document.createElement("div");
+    progressFill.className = "progress-fill";
+    progressFill.style.width = course.progress + "%";
+
+    progressBar.appendChild(progressFill);
+    progressWrapper.appendChild(progressLabel);
+    progressWrapper.appendChild(progressBar);
+
+    card.appendChild(title);
+    card.appendChild(meta);
+    card.appendChild(description);
+    card.appendChild(progressWrapper);
 
     container.appendChild(card);
   });
 }
 
 function renderUpdates(updates) {
-  const updatesList = document.getElementById("updatesList");
+  var updatesList = document.getElementById("updatesList");
   updatesList.innerHTML = "";
 
-  updates.forEach(update => {
-    const li = document.createElement("li");
+  updates.forEach(function(update) {
+    var li = document.createElement("li");
     li.textContent = update;
     updatesList.appendChild(li);
   });
 }
 
 function renderGoals(goals) {
-  const goalsList = document.getElementById("goalsList");
+  var goalsList = document.getElementById("goalsList");
   goalsList.innerHTML = "";
 
-  goals.forEach(goal => {
-    const li = document.createElement("li");
+  goals.forEach(function(goal) {
+    var li = document.createElement("li");
     li.textContent = goal;
     goalsList.appendChild(li);
   });
