@@ -20,6 +20,9 @@
   --success-bg: #ecfdf5;
   --success-border: #86efac;
   --success-text: #166534;
+  --grade-bg: #eef2ff;
+  --grade-border: #c7d2fe;
+  --grade-text: #4338ca;
 }
 
 * {
@@ -128,7 +131,7 @@ body {
 
 .stat-number {
   display: block;
-  font-size: 2.2rem;
+  font-size: 2.15rem;
   font-weight: 800;
   color: var(--primary);
   margin-bottom: 10px;
@@ -240,9 +243,9 @@ body {
 }
 
 .grade-available {
-  background: #eef2ff;
-  color: #4338ca;
-  border: 1px solid #c7d2fe;
+  background: var(--grade-bg);
+  color: var(--grade-text);
+  border: 1px solid var(--grade-border);
 }
 
 .grade-unavailable {
