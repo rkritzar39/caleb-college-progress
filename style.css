@@ -11,6 +11,15 @@
   --border: #dbe4f0;
   --shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
   --radius: 20px;
+  --warning-bg: #fff7ed;
+  --warning-border: #fdba74;
+  --warning-text: #9a3412;
+  --info-bg: #eff6ff;
+  --info-border: #bfdbfe;
+  --info-text: #1d4ed8;
+  --success-bg: #ecfdf5;
+  --success-border: #86efac;
+  --success-text: #166534;
 }
 
 * {
@@ -29,17 +38,25 @@ body {
   line-height: 1.5;
 }
 
-/* Header / hero /
 .hero {
   background: linear-gradient(135deg, #2450db 0%, #10265d 100%);
   color: white;
   padding: 56px 20px 52px;
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .hero-content {
   max-width: 1100px;
   margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 0.92rem;
+  margin-bottom: 16px;
 }
 
 .hero h1 {
@@ -57,14 +74,12 @@ body {
   color: rgba(255, 255, 255, 0.92);
 }
 
-/ Main layout /
 .container {
   max-width: 1100px;
   margin: 28px auto 48px;
   padding: 0 18px;
 }
 
-/ Generic card /
 .card {
   background: var(--card);
   border: 1px solid rgba(219, 228, 240, 0.85);
@@ -88,16 +103,14 @@ body {
   color: #334155;
 }
 
-/ Intro card /
 .intro-card p {
   font-size: 1.08rem;
   color: #334155;
 }
 
-/ Stats /
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -105,9 +118,9 @@ body {
   background: linear-gradient(180deg, #eef4ff 0%, #e7f0ff 100%);
   border: 1px solid #cfe0ff;
   border-radius: 18px;
-  padding: 26px 18px;
+  padding: 24px 18px;
   text-align: center;
-  min-height: 145px;
+  min-height: 140px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,11 +128,11 @@ body {
 
 .stat-number {
   display: block;
-  font-size: 2.45rem;
+  font-size: 2.2rem;
   font-weight: 800;
   color: var(--primary);
   margin-bottom: 10px;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .stat-label {
@@ -129,7 +142,6 @@ body {
   font-weight: 500;
 }
 
-/ Progress bars /
 .progress-bar {
   width: 100%;
   height: 18px;
@@ -152,14 +164,12 @@ body {
   color: #1f2937;
 }
 
-/ Courses grid /
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
-/ Course card /
 .course-card {
   background: linear-gradient(180deg, #ffffff 0%, #f9fbff 100%);
   border: 1px solid var(--border);
@@ -194,18 +204,53 @@ body {
   font-size: 0.98rem;
 }
 
-/ Make the important info lines stand out /
-.course-card p:nth-of-type(2),
-.course-card p:nth-of-type(3),
-.course-card p:nth-of-type(4),
-.course-card p:nth-of-type(5) {
-  background: #f5f8fd;
-  border: 1px solid #e6edf7;
+.course-detail {
   border-radius: 12px;
   padding: 10px 12px;
+  border: 1px solid #e6edf7;
+  background: #f8fbff;
 }
 
-/ Course progress section /
+.status-chip,
+.grade-chip {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.status-registered {
+  background: var(--info-bg);
+  color: var(--info-text);
+  border: 1px solid var(--info-border);
+}
+
+.status-active {
+  background: var(--success-bg);
+  color: var(--success-text);
+  border: 1px solid var(--success-border);
+}
+
+.status-planning {
+  background: var(--warning-bg);
+  color: var(--warning-text);
+  border: 1px solid var(--warning-border);
+}
+
+.grade-available {
+  background: #eef2ff;
+  color: #4338ca;
+  border: 1px solid #c7d2fe;
+}
+
+.grade-unavailable {
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
 .course-progress {
   margin-top: 14px;
   padding-top: 8px;
@@ -218,27 +263,21 @@ body {
   margin-bottom: 8px;
 }
 
-/ Lists /
 .updates-list,
-.goals-list {
+.goals-list,
+.dates-list {
   margin: 8px 0 0;
   padding-left: 22px;
 }
 
 .updates-list li,
-.goals-list li {
+.goals-list li,
+.dates-list li {
   margin-bottom: 12px;
   color: #334155;
   line-height: 1.5;
 }
 
-/ Empty sections /
-.updates-list li:only-child,
-.goals-list li:only-child {
-  color: var(--muted);
-}
-
-/ Footer /
 .footer {
   text-align: center;
   color: #64748b;
@@ -246,17 +285,10 @@ body {
   padding: 12px 20px 42px;
 }
 
-/ Optional "portal" feel for section spacing /
-.card + .card {
-  scroll-margin-top: 24px;
-}
-
-/ Better readability for very long paragraphs /
 #aboutText {
   max-width: 900px;
 }
 
-/ Mobile responsiveness */
 @media (max-width: 960px) {
   .hero h1 {
     font-size: 2.45rem;
@@ -313,7 +345,7 @@ body {
   }
 
   .stat-number {
-    font-size: 2.15rem;
+    font-size: 2rem;
   }
 
   .course-card {
