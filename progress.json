@@ -3,49 +3,81 @@
   "siteSubtitle": "Tracking my academic journey at The University of Toledo.",
   "about": "I am beginning at The University of Toledo through Exploratory Studies while preparing for a future transition into Cyber Security. This page shares my academic progress, semester milestones, and current coursework.",
   "semester": "Fall 2026",
-  "assignmentsCompleted": 3,
-  "assignmentsTotal": 12,
-  "overallProgress": 25,
+  "semesterStart": "August 31, 2026",
+  "totalCreditHours": 14,
+  "assignmentsCompleted": 0,
+  "assignmentsTotal": 0,
+  "overallProgress": 0,
   "courses": [
     {
-      "name": "Math Modeling Problem Solving",
+      "name": "College Composition I",
       "term": "Fall 2026",
-      "description": "Building quantitative reasoning and structured problem-solving skills.",
-      "progress": 20
+      "hours": 3,
+      "description": "Developing writing and communication for college and technical work.",
+      "status": "Registered",
+      "gradeLetter": "",
+      "gradeScore": "",
+      "latestAssignment": "",
+      "latestAssignmentScore": "",
+      "progress": 0
     },
     {
       "name": "Introduction to Logic",
       "term": "Fall 2026",
+      "hours": 3,
       "description": "Developing formal reasoning and analytical thinking for future Cyber Security study.",
-      "progress": 30
-    },
-    {
-      "name": "College Composition I",
-      "term": "Fall 2026",
-      "description": "Strengthening writing and communication for college and technical work.",
-      "progress": 25
-    },
-    {
-      "name": "Orientation",
-      "term": "Fall 2026",
-      "description": "Building a strong foundation for success in college.",
-      "progress": 40
+      "status": "Registered",
+      "gradeLetter": "",
+      "gradeScore": "",
+      "latestAssignment": "",
+      "latestAssignmentScore": "",
+      "progress": 0
     },
     {
       "name": "Managing Diversity in the Workplace",
       "term": "Fall 2026",
+      "hours": 3,
       "description": "Developing teamwork, professionalism, and workplace awareness.",
-      "progress": 15
+      "status": "Registered",
+      "gradeLetter": "",
+      "gradeScore": "",
+      "latestAssignment": "",
+      "latestAssignmentScore": "",
+      "progress": 0
+    },
+    {
+      "name": "Math Modeling Problem Solving",
+      "term": "Fall 2026",
+      "hours": 4,
+      "description": "Building quantitative reasoning and structured problem-solving skills.",
+      "status": "Registered",
+      "gradeLetter": "",
+      "gradeScore": "",
+      "latestAssignment": "",
+      "latestAssignmentScore": "",
+      "progress": 0
+    },
+    {
+      "name": "Orientation",
+      "term": "Fall 2026",
+      "hours": 1,
+      "description": "Building a strong foundation for success in college.",
+      "status": "Registered",
+      "gradeLetter": "",
+      "gradeScore": "",
+      "latestAssignment": "",
+      "latestAssignmentScore": "",
+      "progress": 0
     }
   ],
   "updates": [
-    "Started Fall 2026 at The University of Toledo.",
-    "Set up my first semester schedule.",
-    "Began coursework in Math Modeling Problem Solving and Introduction to Logic."
+    "Finalized Fall 2026 course plan.",
+    "Registered for 14 planned credit hours.",
+    "Preparing for the first day of classes on August 31, 2026."
   ],
   "goals": [
-    "Complete Fall 2026 with a strong academic foundation.",
+    "Begin Fall 2026 with a strong academic foundation.",
     "Build skills that support a future transition into Cyber Security.",
-    "Track progress consistently throughout the semester."
+    "Track course progress consistently throughout the semester."
   ]
 }
