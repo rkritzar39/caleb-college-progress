@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My College Progress</title>
+  <title>Caleb’s College Progress</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero">
     <div class="hero-content">
-      <h1 id="siteTitle">My College Progress</h1>
-      <p id="siteSubtitle">Tracking my academic journey semester by semester.</p>
+      <div class="hero-badge">Student Progress Dashboard</div>
+      <h1 id="siteTitle">Caleb’s College Progress</h1>
+      <p id="siteSubtitle">Tracking my academic journey at The University of Toledo.</p>
     </div>
   </header>
 
@@ -27,14 +28,27 @@
           <span class="stat-number" id="semesterValue">--</span>
           <span class="stat-label">Current Semester</span>
         </div>
+
         <div class="stat-box">
-          <span class="stat-number" id="coursesValue">0</span>
-          <span class="stat-label">Courses</span>
+          <span class="stat-number" id="startDateValue">--</span>
+          <span class="stat-label">Semester Start</span>
         </div>
+
         <div class="stat-box">
-          <span class="stat-number" id="assignmentsValue">0</span>
+          <span class="stat-number" id="countdownValue">--</span>
+          <span class="stat-label">Days Until Start</span>
+        </div>
+
+        <div class="stat-box">
+          <span class="stat-number" id="creditHoursValue">0</span>
+          <span class="stat-label">Planned Credit Hours</span>
+        </div>
+
+        <div class="stat-box">
+          <span class="stat-number" id="assignmentsValue">0/0</span>
           <span class="stat-label">Assignments</span>
         </div>
+
         <div class="stat-box">
           <span class="stat-number" id="overallProgressValue">0%</span>
           <span class="stat-label">Overall Progress</span>
@@ -61,6 +75,11 @@
     </section>
 
     <section class="card">
+      <h2>Upcoming Dates</h2>
+      <ul id="datesList" class="dates-list"></ul>
+    </section>
+
+    <section class="card">
       <h2>Goals</h2>
       <ul id="goalsList" class="goals-list"></ul>
     </section>
@@ -73,4 +92,3 @@
   <script src="app.js"></script>
 </body>
 </html>
-
