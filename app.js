@@ -1,6 +1,11 @@
 async function loadProgress() {
   try {
     const response = await fetch("progress.json");
+
+    if (!response.ok) {
+      throw new Error(Could not load progress.json (${response.status}));
+    }
+
     const data = await response.json();
 
     document.getElementById("siteTitle").textContent = data.siteTitle;
@@ -8,9 +13,12 @@ async function loadProgress() {
     document.getElementById("aboutText").textContent = data.about;
     document.getElementById("semesterValue").textContent = data.semester;
     document.getElementById("coursesValue").textContent = data.courses.length;
-    document.getElementById("assignmentsValue").textContent = data.assignmentsCompleted + "/" + data.assignmentsTotal;
-    document.getElementById("overallProgressValue").textContent = ${data.overallProgress}%;
-    document.getElementById("overallProgressText").textContent = ${data.overallProgress}% complete;
+    document.getElementById("assignmentsValue").textContent =
+      ${data.assignmentsCompleted}/${data.assignmentsTotal};
+    document.getElementById("overallProgressValue").textContent =
+      ${data.overallProgress}%;
+    document.getElementById("overallProgressText").textContent =
+      ${data.overallProgress}% complete;
 
     const overallBar = document.getElementById("overallProgressBar");
     overallBar.style.width = ${data.overallProgress}%;
