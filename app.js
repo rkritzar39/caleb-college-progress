@@ -8,38 +8,24 @@ async function loadProgress() {
 
     var data = await response.json();
 
-    document.getElementById("siteTitle").textContent =
-      data.siteTitle || "My College Progress";
-
-    document.getElementById("siteSubtitle").textContent =
-      data.siteSubtitle || "Tracking my academic journey.";
-
-    document.getElementById("aboutText").textContent =
-      data.about || "No description available.";
-
-    document.getElementById("semesterValue").textContent =
-      data.semester || "--";
-
-    document.getElementById("startDateValue").textContent =
-      formatDisplayDate(data.semesterStart) || "--";
-
-    document.getElementById("creditHoursValue").textContent =
-      data.totalCreditHours || 0;
-
-    document.getElementById("assignmentsValue").textContent =
-      (data.assignmentsCompleted || 0) + "/" + (data.assignmentsTotal || 0);
-
-    document.getElementById("overallProgressValue").textContent =
-      (data.overallProgress || 0) + "%";
-
-    document.getElementById("overallProgressText").textContent =
-      (data.overallProgress || 0) + "% complete";
+    setText("siteTitle", data.siteTitle || "My College Progress");
+    setText("siteSubtitle", data.siteSubtitle || "Tracking my academic journey.");
+    setText("aboutText", data.about || "No description available.");
+    setText("semesterValue", data.semester || "--");
+    setText("startDateValue", formatDisplayDate(data.semesterStart) || "--");
+    setText("creditHoursValue", data.totalCreditHours || 0);
+    setText(
+      "assignmentsValue",
+      (data.assignmentsCompleted || 0) + "/" + (data.assignmentsTotal || 0)
+    );
+    setText("overallProgressValue", (data.overallProgress || 0) + "%");
+    setText("overallProgressText", (data.overallProgress || 0) + "% complete");
+    setText("countdownValue", calculateCountdown(data.semesterStart));
 
     var overallBar = document.getElementById("overallProgressBar");
-    overallBar.style.width = (data.overallProgress || 0) + "%";
-
-    document.getElementById("countdownValue").textContent =
-      calculateCountdown(data.semesterStart);
+    if (overallBar) {
+      overallBar.style.width = (data.overallProgress || 0) + "%";
+    }
 
     renderCourses(data.courses || [], data.semesterStart);
     renderUpdates(data.updates || []);
@@ -47,13 +33,25 @@ async function loadProgress() {
     renderDates(data.upcomingDates || []);
   } catch (error) {
     console.error("Error loading progress data:", error);
-    document.getElementById("aboutText").textContent =
-      "Unable to load progress data right now.";
+
+    var about = document.getElementById("aboutText");
+    if (about) {
+      about.textContent = "Unable to load progress data right now.";
+    }
+  }
+}
+
+function setText(id, value) {
+  var el = document.getElementById(id);
+  if (el) {
+    el.textContent = value;
   }
 }
 
 function renderCourses(courses, semesterStart) {
   var container = document.getElementById("coursesList");
+  if (!container) return;
+
   container.innerHTML = "";
 
   if (!courses.length) {
@@ -153,6 +151,8 @@ function renderCourses(courses, semesterStart) {
 
 function renderUpdates(updates) {
   var updatesList = document.getElementById("updatesList");
+  if (!updatesList) return;
+
   updatesList.innerHTML = "";
 
   if (!updates.length) {
@@ -171,6 +171,8 @@ function renderUpdates(updates) {
 
 function renderGoals(goals) {
   var goalsList = document.getElementById("goalsList");
+  if (!goalsList) return;
+
   goalsList.innerHTML = "";
 
   if (!goals.length) {
@@ -189,6 +191,8 @@ function renderGoals(goals) {
 
 function renderDates(dates) {
   var datesList = document.getElementById("datesList");
+  if (!datesList) return;
+
   datesList.innerHTML = "";
 
   if (!dates.length) {
